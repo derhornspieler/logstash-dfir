@@ -4,6 +4,7 @@
 	sudo -u logstash /opt/logstash/bin/logstash -f /etc/logstash/conf.d/bro-conn_log.conf --debug
 	sudo -u logstash /opt/logstash/bin/logstash agent -f /etc/logstash/conf.d/bro-conn_log.conf --configtest
 	sudo -u logstash /opt/logstash/bin/logstash agent -f /etc/logstash/conf.d --configtest
+	./logstash -t  --path.settings /etc/logstash/ --verbose -f /etc/logstash/conf.d
 
 ## Bro
 
